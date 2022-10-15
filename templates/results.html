@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container" align="left">
+      <h1 class="alert alert-primary">{{ the_title }}</h1>
+
+      <table>
+          <tr><td>ISBN: <b>{{ isbn13 }}</b></td></tr>
+          <tr><td><img src="{{ bookcover_url }}" alt="bookcover image" width="200" height="300"></td></tr>
+      </table>
+
+      <br>
+      <h4 class="alert alert-success">Click on the curated links below!</h4>
+      <br>
+
+          {% if the_results_links %}
+
+              {% for key,value in the_results_links.items() %}
+
+                <b><h6 class="alert alert-secondary">{{key}} <br></b><br> <a href="{{value}}" target=_blank rel=noopener noreferrer >link</a></h6><br>
+                <br>
+
+              {% endfor %}
+
+          {% else %}
+
+             <h3 class="alert alert-warning"> <b>SORRY, NO RESULTS FOUND</b></h3>
+
+          {% endif %}
+
+          {% if the_results_links %}
+
+              <p hidden>{{the_results_links.clear()}}</p>
+
+          {% endif %}
+
+      <br>
+      <h3 class="alert alert-warning"><a href="{{url_for('entry_page')}}">Return to form</a></h3>
+</div>
+
+{% endblock %}

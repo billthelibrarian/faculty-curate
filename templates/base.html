@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>{{ the_title}} </title>
+
+        <!-- Bring in the Bootstrap stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+        <!-- Bring in our own stylesheet, AFTER Bootstrap  -->
+        <link rel="stylesheet" href="/static/hf.css">
+
+    </head>
+   <body>
+        {% block body %}
+
+        {% endblock %}
+
+        <!-- Bring in d3 and plotly, then my js logic -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <!-- <script src="/interactive-web-visualizations/static/js/app.js"></script>   -->
+
+    </body>
+</html>

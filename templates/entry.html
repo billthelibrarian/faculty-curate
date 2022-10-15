@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+  <div class="container" align="center">
+      <h1 class="alert alert-primary">{{ the_title }}</h1>
+
+      <p>© billthelibrarian 2022</p>
+
+      <div class="form">
+          <form method="POST" action="{{url_for('do_search')}}">
+
+                <div class="mb-3">
+                  <label for="exampleIsbn" class="form-label"><b>Enter ISBN or title words for your textbook:</b></label>
+                  <br>
+                  <input title="ISBN or title words" type="TEXT"  id="exampleIsbn" name="isbn_input" required />
+                  <br><br>
+                  <input type="SUBMIT" value="Curate!" class="btn btn-primary" />
+                  <input type="RESET" value="Clear form" class="btn btn-secondary"/>
+                  <br>
+                </div>
+          </form>
+      </div>
+
+      <br>
+
+      <h5 class="alert alert-success">If your ISBN is not getting results, try entering the full title of your textbook.</h5>
+      <h6 class="alert alert-warning">To see an example of the fullest results from Faculty Curate enter 9780838913000</h6>
+      <br>
+  </div>
+
+{% endblock %}

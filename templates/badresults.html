@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container" align="left">
+
+   <h3 class="alert alert-warning">Sorry, couldn't find any info for this title.</h3>
+   <br>
+   <h4 class="alert alert-warning">Try searching by title words, or track down a better ISBN!</h4>
+
+        {% if the_results_links %}
+
+            <p hidden>{{the_results_links.clear()}}</p>
+            
+        {% endif %}
+
+    <br>
+    <h3 class="alert alert-success"><a href="{{url_for('entry_page')}}">Return to form</a></h3>
+
+</div>
+
+{% endblock %}
