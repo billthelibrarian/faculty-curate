@@ -1,0 +1,41 @@
+/* My CSS stylesheet */
+
+.navbar-brand {
+    background-color: aquamarine;
+    padding: 10px;
+    border: 10px;
+
+}
+
+#summary_pic {
+    width:25%;
+    height:25%;
+
+}
+
+.card {
+    margin:5px;
+    padding: auto;
+    
+}
+
+.card-title {
+    color:blue;
+    padding: 10px;
+   
+}
+
+.card-subtitle {
+    color: black;
+    padding: 10px;
+    
+}
+
+
+
+/* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 576 pixels */
+@media (max-width: 576px) {
+    .container-fluid {
+        background-color:aquamarine;
+    }
+}
